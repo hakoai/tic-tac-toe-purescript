@@ -100,7 +100,7 @@ checkDownAll koma count l@(ll@(x:_):lx) | koma x =
      checkDown koma count l 
   || checkDownRight koma count l
   || checkRight koma count ll
-  || checkDownRight koma count lx
+  || checkDownAll koma count lx
 checkDownAll koma count ((_:_):lx) = checkDownAll koma count lx
 checkDownAll _ _ _ = false
 
